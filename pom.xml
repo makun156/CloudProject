@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>mybatis-generator2024</module>
+        <module>cloud-provider-payment</module>
     </modules>
     <name>CloudProject</name>
     <description>CloudProject</description>
