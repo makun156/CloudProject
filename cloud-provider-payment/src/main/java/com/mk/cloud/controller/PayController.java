@@ -38,6 +38,9 @@ public class PayController {
     }
     @GetMapping("/pay/get/{id}")
     public ResultData<Pay> getById(@PathVariable("id") Integer id){
+        if(id==-4){
+            throw new RuntimeException("id不存在");
+        }
         log.info("getById:{}",id);
         Pay pay = payService.getById(id);
         //PayDTO payDTO = new PayDTO();
