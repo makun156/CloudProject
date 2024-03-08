@@ -9,6 +9,8 @@
     <modules>
         <module>mybatis-generator2024</module>
         <module>cloud-provider-payment</module>
+        <module>cloud-consumer-order</module>
+        <module>cloud-api-commons</module>
     </modules>
     <name>CloudProject</name>
     <description>CloudProject</description>

@@ -37,15 +37,15 @@ public class PayController {
         return ResultData.success("成功更新记录，返回值"+updateRes);
     }
     @GetMapping("/pay/get/{id}")
-    public ResultData<Pay> getById(@PathVariable("id") Integer id){
+    public ResultData<PayDTO> getById(@PathVariable("id") Integer id){
         if(id==-4){
             throw new RuntimeException("id不存在");
         }
         log.info("getById:{}",id);
         Pay pay = payService.getById(id);
-        //PayDTO payDTO = new PayDTO();
-        //BeanUtils.copyProperties(pay,payDTO);
-        return ResultData.success(pay);
+        PayDTO payDTO = new PayDTO();
+        BeanUtils.copyProperties(pay,payDTO);
+        return ResultData.success(payDTO);
     }
     @GetMapping("/pay/getAll")
     public ResultData<List<PayDTO>> getAll(){

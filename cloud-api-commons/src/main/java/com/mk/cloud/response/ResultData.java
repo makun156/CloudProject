@@ -1,11 +1,7 @@
 package com.mk.cloud.response;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
-
-import javax.persistence.Access;
 
 @Data
 @Accessors(chain = true)
