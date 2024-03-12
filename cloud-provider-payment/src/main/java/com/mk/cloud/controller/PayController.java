@@ -45,7 +45,7 @@ public class PayController {
     public ResultData<PayDTO> getById(@PathVariable("id") Integer id) {
         System.out.println("openfeign调用了");
         try {
-            Thread.sleep(2000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

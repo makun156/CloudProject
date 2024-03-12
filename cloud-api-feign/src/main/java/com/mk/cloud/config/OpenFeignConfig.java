@@ -14,6 +14,7 @@ public class OpenFeignConfig {
          * 5000表示最大重试间隔时间（毫秒）
          * 3表示最大重试次数
          */
-        return new Retryer.Default(1000, 5000, 3);
+        //return new Retryer.Default(1000, 5000, 3);
+        return Retryer.NEVER_RETRY;
     }
 }
