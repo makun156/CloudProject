@@ -43,10 +43,8 @@ public class PayController {
 
     @GetMapping("/pay/get/{id}")
     public ResultData<PayDTO> getById(@PathVariable("id") Integer id) {
-        try {
-            Thread.sleep(8000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        if (id == -4) {
+            throw new RuntimeException("id不存在");
         }
         log.info("getById:{}", id);
         Pay pay = payService.getById(id);

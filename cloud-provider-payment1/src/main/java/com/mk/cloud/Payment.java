@@ -3,12 +3,7 @@ package com.mk.cloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import tk.mybatis.spring.annotation.MapperScan;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @SpringBootApplication
 @MapperScan("com.mk.cloud.mapper")

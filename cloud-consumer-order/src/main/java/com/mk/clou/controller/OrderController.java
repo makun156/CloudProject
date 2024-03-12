@@ -4,14 +4,15 @@ import com.mk.cloud.entities.PayDTO;
 import com.mk.cloud.response.ResultData;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
 @Slf4j
 public class OrderController {
-    public static final String Payment_URL="http://localhost:8001";
-    @Resource
+    public static final String Payment_URL="http://cloud-payment-service";
+    @Autowired
     public RestTemplate restTemplate;
     @PostMapping("/consumer/pay/add")
     public ResultData addOrder(@RequestBody PayDTO payDTO){

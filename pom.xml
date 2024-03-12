@@ -11,6 +11,8 @@
         <module>cloud-provider-payment</module>
         <module>cloud-consumer-order</module>
         <module>cloud-api-commons</module>
+        <module>cloud-provider-payment1</module>
+        <module>cloud-api-feign</module>
     </modules>
     <name>CloudProject</name>
     <description>CloudProject</description>

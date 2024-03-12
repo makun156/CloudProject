@@ -1,16 +1,16 @@
-server:
-  port: 80
 spring:
   application:
-    name: cloud-order-service
+    name: cloud-payment-service
   cloud:
     consul:
       host: 192.168.111.128
       port: 8500
+      #打开心跳检测机制，防止在注册中心中检测不到服务是否存活
       discovery:
         service-name: ${spring.application.name}
         heartbeat:
           enabled: true
         prefer-ip-address: true
-          #实例的请求ip
-        ip-address: 192.168.0.106
+      config:
+        profile-separator: '-'
+        format: yaml
