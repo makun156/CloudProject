@@ -43,8 +43,9 @@ public class PayController {
 
     @GetMapping("/pay/get/{id}")
     public ResultData<PayDTO> getById(@PathVariable("id") Integer id) {
+        System.out.println("openfeign调用了");
         try {
-            Thread.sleep(8000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

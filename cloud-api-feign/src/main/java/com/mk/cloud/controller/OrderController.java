@@ -9,7 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.logging.SimpleFormatter;
 
 @RestController
 public class OrderController {
@@ -24,9 +27,15 @@ public class OrderController {
     @GetMapping("/feign/pay/get/{id}")
     public ResultData<PayDTO> getById(@PathVariable("id") Integer id) {
         System.out.println("feign调用get");
+        //输出当前时间
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        System.out.println("当前时间：" + sdf.format(new Date()));
+
         try {
             ResultData byId = payFeignApi.getById(id);
         } catch (Exception e) {
+            System.out.println("当前时间：" + sdf.format(new Date()));
+
             e.printStackTrace();
         }
         return null;
