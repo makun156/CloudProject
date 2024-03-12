@@ -21,3 +21,14 @@ spring:
       httpclient:
         hc5:
           enabled: true
+#开启openfeign自带的日志打印功能固定写法
+#logging.level + feign接口全路径+类名 + debug
+#并且要配置openfeign日志开启
+logging:
+  level:
+    com:
+      mk:
+        cloud:
+          apis:
+            PayFeignApi: debug
+
