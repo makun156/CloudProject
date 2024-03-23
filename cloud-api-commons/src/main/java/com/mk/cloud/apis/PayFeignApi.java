@@ -14,4 +14,10 @@ public interface PayFeignApi {
     ResultData add(@RequestBody PayDTO payDTO);
     @GetMapping("/pay/get/{id}")
     ResultData getById(@PathVariable("id") Integer id);
+    //测试circuit断路器
+    @GetMapping("/pay/circuit/{id}")
+    String circuit(@PathVariable("id") Integer id);
+    //测试舱壁模式
+    @GetMapping("/pay/bulkhead/{id}")
+    String bulkhead(@PathVariable("id") Integer id);
 }
